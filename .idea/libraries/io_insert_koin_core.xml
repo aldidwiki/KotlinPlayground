@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="io.insert.koin.core" type="repository">
+    <properties maven-id="io.insert-koin:koin-core:3.2.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/koin-core-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-common-1.6.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stately-concurrency-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stately-common-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
