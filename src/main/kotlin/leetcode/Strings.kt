@@ -1,5 +1,7 @@
 package leetcode
 
+import kotlin.math.abs
+
 fun reverseString() {
     val strings = charArrayOf('H', 'a', 'n', 'n', 'a', 'h')
 //    val strings = charArrayOf('h', 'e', 'l', 'l', 'o')
@@ -37,7 +39,17 @@ fun firstUniqueCharacter(): Int {
 }
 
 fun reverseInteger(): Int {
-    var x = 123
+    var x = 1534236469
+    var res = 0
 
-    return x
+    while (x != 0) {
+        val digit = x % 10
+        x /= 10
+
+        if (abs(res) > Int.MAX_VALUE / 10) return 0
+
+        res = res * 10 + digit
+    }
+
+    return res
 }
