@@ -53,3 +53,39 @@ fun reverseInteger(): Int {
 
     return res
 }
+
+fun validAnagram(): Boolean {
+    val s = "car"
+    val t = "rat"
+
+    val countMap = mutableMapOf<Char, Int>()
+    val countMap2 = mutableMapOf<Char, Int>()
+
+    for (char in s) {
+        countMap[char] = countMap.getOrDefault(char, 0) + 1
+    }
+
+    for (char in t) {
+        countMap2[char] = countMap2.getOrDefault(char, 0) + 1
+    }
+
+    println(countMap)
+    println(countMap2)
+
+    return countMap == countMap2
+}
+
+fun validPalindrome(): Boolean {
+    val s = "race a car".filter {
+        it.isLetterOrDigit()
+    }.lowercase()
+
+    var r = ""
+    for (i in s.length - 1 downTo 0) {
+        r += s[i]
+    }
+
+    println(r)
+
+    return r == s
+}

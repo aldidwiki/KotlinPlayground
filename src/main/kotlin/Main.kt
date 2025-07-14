@@ -3,10 +3,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.transform
-import leetcode.reverseInteger
+import leetcode.validPalindrome
 
 fun main() {
-    println(reverseInteger())
+    println(validPalindrome())
 }
 
 inline fun <reified T1, T2> Flow<State<T1>>.chainWith(
