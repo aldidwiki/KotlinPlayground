@@ -105,3 +105,55 @@ fun implementStr(): Int {
 
     return -1
 }
+
+fun myAtoi(): Int {
+    val s = "1337c0d3"
+    val INT_MAX = Int.MAX_VALUE
+    val INT_MIN = Int.MIN_VALUE
+
+    var i = 0
+    val n = s.length
+    var result = 0
+    var sign = 1
+
+    // Step 1: Ignore leading whitespace
+    while (i < n && s[i] == ' ') {
+        i++
+    }
+
+    // Step 2: Check for optional sign
+    if (i < n && (s[i] == '+' || s[i] == '-')) {
+        sign = if (s[i] == '-') -1 else 1
+        i++
+    }
+
+    // Step 3: Convert digits to integer
+    while (i < n && s[i] in '0'..'9') {
+        val digit = s[i] - '0'
+
+        // Check for overflow/underflow before multiplying
+        if (result > (INT_MAX - digit) / 10) {
+            return if (sign == 1) INT_MAX else INT_MIN
+        }
+
+        result = result * 10 + digit
+        i++
+    }
+
+    return result * sign
+}
+
+fun longestCommonPrefix(): String {
+    val str = listOf("flower", "flow", "flight")
+
+    val countMap = mutableMapOf<String, Int>()
+
+    for (i in str.indices) {
+        for (j in str[i].indices) {
+            val checker1 = str[i].substring(0, j + 1)
+            val checker2 = str
+        }
+    }
+
+    return ""
+}
