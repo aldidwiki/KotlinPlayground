@@ -144,16 +144,17 @@ fun myAtoi(): Int {
 }
 
 fun longestCommonPrefix(): String {
-    val str = listOf("flower", "flow", "flight")
+    val strs = listOf("flower", "flow", "flight")
+    if (strs.isEmpty()) return ""
 
-    val countMap = mutableMapOf<String, Int>()
+    var prefix = strs[0]
 
-    for (i in str.indices) {
-        for (j in str[i].indices) {
-            val checker1 = str[i].substring(0, j + 1)
-            val checker2 = str
+    for (i in 1 until strs.size) {
+        while (strs[i].indexOf(prefix) != 0) {
+            prefix = prefix.substring(0, prefix.length - 1)
+            if (prefix.isEmpty()) return ""
         }
     }
 
-    return ""
+    return prefix
 }
