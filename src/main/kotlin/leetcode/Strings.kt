@@ -89,3 +89,19 @@ fun validPalindrome(): Boolean {
 
     return r == s
 }
+
+fun implementStr(): Int {
+    val haystack = "sadbutsad"
+    val needle = "sad"
+
+    val n = haystack.length
+    val m = needle.length
+
+    for (i in 0..(n - m)) {
+        if (haystack.substring(i, i + m) == needle) {
+            return i
+        }
+    }
+
+    return -1
+}
